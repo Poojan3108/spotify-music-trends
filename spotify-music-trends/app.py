@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from dashboard_data import (CLUSTER_FEATURES, cluster_by_year, load_clean_songs,  # noqa: E402
                             popularity_correlations, yearly_trends)
 
-st.set_page_config(page_title="Two Decades of Hit Music", page_icon="🎵", layout="wide")
+st.set_page_config(page_title="HitScope", page_icon="🎵", layout="wide")
 TYPE_COLORS = alt.Scale(domain=["High Energy", "Balanced", "Low Energy / Emotional"],
                         range=["#e45756", "#4c78a8", "#72b7b2"])
 LABELS = {"danceability": "Danceability", "energy": "Energy", "valence": "Valence (positivity)",
@@ -32,7 +32,8 @@ def load():
 
 songs, clustered, loadings, trends, corr, matches = load()
 
-st.title("🎵 Two Decades of Hit Music")
+st.title("🎵 HitScope")
+st.subheader("Two decades of hit music, analyzed")
 st.caption(f"How {len(songs):,} Spotify top hits (1999–2019) changed over time, what makes them popular, "
            "and how Spotify success compares with the Billboard Hot 100.")
 
