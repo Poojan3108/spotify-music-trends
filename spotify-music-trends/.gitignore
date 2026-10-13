@@ -1,0 +1,6 @@
+   .env
+   venv/
+   results/
+   data/charts.csv
+   __pycache__/
+   .pytest_cache/
